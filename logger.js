@@ -4,7 +4,7 @@ function log(...args) {
   const label = args[1] ? ` ${args[1]}: ` : "";
   let content = args[0];
   const emojiStyles =
-    "background: papayawhip; border-radius:200%; font-size: 3rem; padding: .5rem";
+    "background: papayawhip; border-radius:1rem; font-size: 2rem; padding: .5rem; margin-right: .5rem;";
   const styles =
     "background:#444; color:#bada55; border-radius:2px; font-size: .875rem; padding: .25rem";
   const emoji = randomEmoji();
