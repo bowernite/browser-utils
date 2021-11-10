@@ -2,12 +2,23 @@
 
 function log(...args) {
   const label = args[1];
-  const content = args[0];
-  if (label) {
-    console.log(randomEmoji(), `${label}:`, content);
+  let content = args[0];
+  let finalArgs;
+  if (typeof content === "object") {
+    if (label) {
+      finalArgs = [randomEmoji(), `${label}:`, content];
+    } else {
+      finalArgs = [randomEmoji(), content];
+    }
   } else {
-    console.log(randomEmoji(), content);
+    const styles = "background:#444; color:#bada55; border-radius:2px";
+    if (label) {
+      finalArgs = [`%c${randomEmoji()} ${label}: ${content}`, styles];
+    } else {
+      finalArgs = [`%c${randomEmoji()} ${content}`, styles];
+    }
   }
+  console.log(...finalArgs);
 
   /**
    * Potential sources:
@@ -27,4 +38,4 @@ function log(...args) {
 }
 console.log(log);
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
-location.href = `javascript:console.info=${log}`;
+location.href = `javascript:window.log=${log}`;
