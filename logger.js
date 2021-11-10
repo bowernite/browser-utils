@@ -1,5 +1,8 @@
 const log = (...args) => {
-  const randomEmoji = () => "🧙🏼‍♂️";
   console.log(randomEmoji(), ...args);
+  
+  function randomEmoji() {
+    return "🧙🏼‍♂️"   
+  }
 };
 location.href = `javascript:window.test=${log}`;
