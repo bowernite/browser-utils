@@ -19,4 +19,5 @@ function log(...args) {
     return emojis[Math.floor(Math.random() * emojis.length)];
   }
 }
-location.href = `javascript:window.test=${log}`;
+// TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
+location.href = `javascript:console.info=${log}`;
