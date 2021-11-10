@@ -5,7 +5,8 @@ function log(...args) {
   let content = args[0];
   let finalArgs;
   console.info(typeof content, `typeof content`);
-  const styles = "background:#444; color:#bada55; border-radius:2px";
+  const styles =
+    "background:#444; color:#bada55; border-radius:2px; font-size: 1rem";
   if (typeof content === "object") {
     if (label) {
       finalArgs = [`%c${randomEmoji()} ${label}:`, styles, content];
