@@ -4,14 +4,15 @@ function log(...args) {
   const label = args[1];
   let content = args[0];
   let finalArgs;
+  console.info(typeof content, `typeof content`);
+  const styles = "background:#444; color:#bada55; border-radius:2px";
   if (typeof content === "object") {
     if (label) {
-      finalArgs = [randomEmoji(), `${label}:`, content];
+      finalArgs = [`%c${randomEmoji()} ${label}:`, styles, content];
     } else {
-      finalArgs = [randomEmoji(), content];
+      finalArgs = [`%c${randomEmoji()}`, styles, content];
     }
   } else {
-    const styles = "background:#444; color:#bada55; border-radius:2px";
     if (label) {
       finalArgs = [`%c${randomEmoji()} ${label}: ${content}`, styles];
     } else {
