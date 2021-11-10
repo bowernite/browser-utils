@@ -1,3 +1,5 @@
+/**  NOTE: Because of the way the functions we're injecting get flattened into one line, we can't use `//` inline comments (it'll just comment out the rest of the function). So for now, without investigating this, just use `/*` comments, where we can explicitly end them, instead */
+
 function log(...args) {
   console.log(randomEmoji(), ...args);
 
