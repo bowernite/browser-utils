@@ -3,24 +3,26 @@
 function log(...args) {
   const label = args[1];
   let content = args[0];
-  let finalArgs;
-  console.info(typeof content, `typeof content`);
   const styles =
     "background:#444; color:#bada55; border-radius:2px; font-size: 1rem";
+  const emoji = randomEmoji();
   if (typeof content === "object") {
     if (label) {
-      finalArgs = [`%c${randomEmoji()} ${label}:`, styles, content];
+      console.log(`%c${emoji} ${label}:`, styles, content);
+      console.log(
+        `%c${emoji} ${label}:\n\n ${JSON.stringify(content, null, 2)}`,
+        styles
+      );
     } else {
-      finalArgs = [`%c${randomEmoji()}`, styles, content];
+      console.log(`%c${emoji}`, styles, content);
     }
   } else {
     if (label) {
-      finalArgs = [`%c${randomEmoji()} ${label}: ${content}`, styles];
+      console.log(`%c${emoji} ${label}: ${content}`, styles);
     } else {
-      finalArgs = [`%c${randomEmoji()} ${content}`, styles];
+      console.log(`%c${emoji} ${content}`, styles);
     }
   }
-  console.log(...finalArgs);
 
   /**
    * Potential sources:
