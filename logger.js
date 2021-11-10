@@ -1,7 +1,13 @@
 /** NOTE: Because of the way the functions we're injecting get flattened into one line, we can't use `//` inline comments (it'll just comment out the rest of the function). So for now, without investigating this, just use `/*` comments, where we can explicitly end them, instead */
 
 function log(...args) {
-  console.log(randomEmoji(), ...args);
+  const label = args[1];
+  const content = args[0];
+  if (label) {
+    console.log(randomEmoji(), `${label}:`, content);
+  } else {
+    console.log(randomEmoji(), content);
+  }
 
   /**
    * Potential sources:
@@ -19,5 +25,6 @@ function log(...args) {
     return emojis[Math.floor(Math.random() * emojis.length)];
   }
 }
+console.log(log);
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
 location.href = `javascript:console.info=${log}`;
