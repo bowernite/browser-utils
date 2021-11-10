@@ -10,7 +10,7 @@ function log(...args) {
     if (label) {
       console.log(`%c${emoji} ${label}:`, styles, content);
       console.log(
-        `%c${emoji} ${label}:\n\n ${JSON.stringify(content, null, 2)}`,
+        `%c${emoji} ${label}:\n\n${JSON.stringify(content, null, 2)}`,
         styles
       );
     } else {
