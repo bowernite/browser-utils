@@ -45,4 +45,4 @@ function log(...args) {
 }
 console.log(log);
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
-location.href = `javascript:window.log=${log}`;
+location.href = `javascript:console.log=${log}`;
