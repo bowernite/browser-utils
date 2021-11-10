@@ -1,7 +1,7 @@
 /** NOTE: Because of the way the functions we're injecting get flattened into one line, we can't use `//` inline comments (it'll just comment out the rest of the function). So for now, without investigating this, just use `/*` comments, where we can explicitly end them, instead */
 
 function log(...args) {
-  const label = args[1];
+  const label = args[1] ? ` ${args[1]}: ` : "";
   let content = args[0];
   const emojiStyles =
     "background: papayawhip; border-radius:200%; font-size: 3rem; padding: .5rem";
@@ -9,22 +9,14 @@ function log(...args) {
     "background:#444; color:#bada55; border-radius:2px; font-size: .875rem; padding: .25rem";
   const emoji = randomEmoji();
   if (typeof content === "object") {
-    if (label) {
-      console.log(`%c${emoji}%c ${label}:`, emojiStyles, styles, content);
-      console.log(
-        `%c${emoji}%c ${label}:\n\n${JSON.stringify(content, null, 2)}`,
-        emojiStyles,
-        styles
-      );
-    } else {
-      console.log(`%c${emoji}%c`, emojiStyles, styles, content);
-    }
+    console.info(`%c${emoji}%c${label}`, emojiStyles, styles, content);
+    console.info(
+      `%c${emoji}%c ${label}:\n\n${JSON.stringify(content, null, 2)}`,
+      emojiStyles,
+      styles
+    );
   } else {
-    if (label) {
-      console.log(`%c${emoji}%c ${label}: ${content}`, emojiStyles, styles);
-    } else {
-      console.log(`%c${emoji}%c ${content}`, emojiStyles, styles);
-    }
+    console.info(`%c${emoji}%c${label} ${content}`, emojiStyles, styles);
   }
 
   /**
