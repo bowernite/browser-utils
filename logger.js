@@ -10,11 +10,11 @@ function log(...args) {
   const emoji = randomEmoji();
   if (typeof content === "object") {
     console.info(`%c${emoji}%c${label}`, emojiStyles, textStyles, content);
-    // console.info(
-    //   `%c${emoji}%c ${label}:\n\n${JSON.stringify(content, null, 2)}`,
-    //   emojiStyles,
-    //   textStyles
-    // );
+    /* console.info(
+      `%c${emoji}%c ${label}:\n\n${JSON.stringify(content, null, 2)}`,
+      emojiStyles,
+      textStyles
+    ); */
   } else {
     console.info(`%c${emoji}%c${label} ${content}`, emojiStyles, textStyles);
   }
