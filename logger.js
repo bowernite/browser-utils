@@ -5,18 +5,18 @@ function log(...args) {
   let content = args[0];
   const emojiStyles =
     "background: papayawhip; border-radius:1rem; font-size: 2rem; padding: .5rem; margin-right: .5rem;";
-  const styles =
-    "background:#444; color:#bada55; border-radius:2px; font-size: .875rem; padding: .25rem";
+  const textStyles =
+    "background:#444; color:#bada55; border-radius:2px; font-size: .75rem; padding: .25rem";
   const emoji = randomEmoji();
   if (typeof content === "object") {
-    console.info(`%c${emoji}%c${label}`, emojiStyles, styles, content);
-    console.info(
-      `%c${emoji}%c ${label}:\n\n${JSON.stringify(content, null, 2)}`,
-      emojiStyles,
-      styles
-    );
+    console.info(`%c${emoji}%c${label}`, emojiStyles, textStyles, content);
+    // console.info(
+    //   `%c${emoji}%c ${label}:\n\n${JSON.stringify(content, null, 2)}`,
+    //   emojiStyles,
+    //   textStyles
+    // );
   } else {
-    console.info(`%c${emoji}%c${label} ${content}`, emojiStyles, styles);
+    console.info(`%c${emoji}%c${label} ${content}`, emojiStyles, textStyles);
   }
 
   /**
@@ -37,4 +37,4 @@ function log(...args) {
 }
 
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
-location.href = `javascript:console.log=${log}`;
+location.href = `javascript:console.dir=${log}`;
