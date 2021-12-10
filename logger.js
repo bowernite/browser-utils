@@ -1,3 +1,7 @@
+/**
+ * @file - Adds a logger utility to the document
+ */
+
 /** NOTE: Because of the way the functions we're injecting get flattened into one line, we can't use `//` inline comments (it'll just comment out the rest of the function). So for now, without investigating this, just use `/*` comments, where we can explicitly end them, instead */
 
 function log(...args) {
@@ -38,30 +42,3 @@ function log(...args) {
 
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
 location.href = `javascript:console.dir=${log}`;
-
-const className = "___bja-no-focus";
-window.addEventListener("DOMContentLoaded", () => {
-  const style = document.head.appendChild(document.createElement("style"));
-  style.innerHTML = `
-  .${className}::before {
-    content: "";
-    height: 20px;
-    width: 100vw;
-    position: fixed;
-    z-index: 99999999999;
-    background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0));
-    top: 0;
-  }
-  /* .${className} {
-    border: 1px solid red;
-    box-sizing: border-box
-  } */
-  `;
-});
-window.setInterval(() => {
-  if (document.hasFocus()) {
-    document.body.classList.remove(className);
-  } else {
-    document.body?.classList.add(className);
-  }
-}, 50);

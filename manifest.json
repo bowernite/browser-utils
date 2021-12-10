@@ -1,13 +1,13 @@
 {
-  "name": "Logger Utils",
-  "description": "Log uniquely and distinctly while debuggin",
+  "name": "Brett's Chrome Utils",
+  "description": "Various manipulations I make to web pages to help my usage with them",
   "version": "0.0.1",
   "manifest_version": 2,
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
       "run_at": "document_start",
-      "js": ["logger.js"]
+      "js": ["logger.js", "document-no-focus.js"]
     }
   ]
 }
