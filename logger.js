@@ -38,3 +38,24 @@ function log(...args) {
 
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
 location.href = `javascript:console.dir=${log}`;
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+  const style = document.head.appendChild(document.createElement("style"));
+  style.innerHTML = `
+  .___bja-no-focus::before {
+    content: "";
+    height: 10px;
+    width: 100vw;
+    background: red;
+    position: fixed;
+  }
+  `;
+});
+window.setInterval(() => {
+  if (!document.hasFocus()) {
+    document.body.classList.add("___bja-no-focus");
+  } else {
+    document.body.classList.remove("___bja-no-focus");
+  }
+}, 50);
