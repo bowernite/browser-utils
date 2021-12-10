@@ -39,8 +39,7 @@ function log(...args) {
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
 location.href = `javascript:console.dir=${log}`;
 
-window.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM fully loaded and parsed");
+window.addEventListener("DOMContentLoaded", () => {
   const style = document.head.appendChild(document.createElement("style"));
   style.innerHTML = `
   .___bja-no-focus::before {
