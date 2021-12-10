@@ -49,6 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
     width: 100vw;
     background: red;
     position: fixed;
+    z-index: 99999999999;
   }
   `;
 });
@@ -58,4 +59,6 @@ window.setInterval(() => {
   } else {
     document.body.classList.add(className);
   }
+  // TODO: Remove
+  document.body.classList.add(className);
 }, 50);
