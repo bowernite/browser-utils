@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Browser Utils 🐧</h1>
-  <p>A Chrome extension for a slew of manipulations that I want to make to web pages for better use
+  <p>A Chrome extension for a slew of handy tricks I use in the browser
 </div>
 
 <hr />

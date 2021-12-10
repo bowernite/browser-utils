@@ -1,6 +1,6 @@
 {
   "name": "Brett's Chrome Utils",
-  "description": "Various manipulations I make to web pages to help my usage with them",
+  "description": "A Chrome extension for a slew of handy tricks I use in the browser",
   "version": "0.0.1",
   "manifest_version": 2,
   "content_scripts": [
