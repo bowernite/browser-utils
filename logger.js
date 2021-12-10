@@ -50,6 +50,8 @@ window.addEventListener("DOMContentLoaded", () => {
     background: red;
     position: fixed;
     z-index: 99999999999;
+    /* Not sure if I want this yet? */
+    /* top: 0; */
   }
   `;
 });
