@@ -39,10 +39,11 @@ function log(...args) {
 // TODO: Find a really easy, concise way to call this/these. Maybe some obscure 2 or 3 letter `window` method
 location.href = `javascript:console.dir=${log}`;
 
+const className = "___bja-no-focus";
 window.addEventListener("DOMContentLoaded", () => {
   const style = document.head.appendChild(document.createElement("style"));
   style.innerHTML = `
-  .___bja-no-focus::before {
+  .${className}::before {
     content: "";
     height: 10px;
     width: 100vw;
@@ -53,8 +54,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 window.setInterval(() => {
   if (document.hasFocus()) {
-    document.body.classList.remove("___bja-no-focus");
+    document.body.classList.remove(className);
   } else {
-    document.body.classList.add("___bja-no-focus");
+    document.body.classList.add(className);
   }
 }, 50);
