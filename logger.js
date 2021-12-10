@@ -52,10 +52,10 @@ window.addEventListener("DOMContentLoaded", () => {
     background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0));
     top: 0;
   }
-  .${className} {
+  /* .${className} {
     border: 1px solid red;
     box-sizing: border-box
-  }
+  } */
   `;
 });
 window.setInterval(() => {
