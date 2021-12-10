@@ -45,13 +45,16 @@ window.addEventListener("DOMContentLoaded", () => {
   style.innerHTML = `
   .${className}::before {
     content: "";
-    height: 10px;
+    height: 20px;
     width: 100vw;
-    background: red;
     position: fixed;
     z-index: 99999999999;
-    /* Not sure if I want this yet? */
-    /* top: 0; */
+    background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0));
+    top: 0;
+  }
+  .${className} {
+    border: 1px solid red;
+    box-sizing: border-box
   }
   `;
 });
@@ -59,8 +62,6 @@ window.setInterval(() => {
   if (document.hasFocus()) {
     document.body.classList.remove(className);
   } else {
-    document.body.classList.add(className);
+    document.body?.classList.add(className);
   }
-  // TODO: Remove
-  document.body.classList.add(className);
 }, 50);
