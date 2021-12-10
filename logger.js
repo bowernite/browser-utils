@@ -52,9 +52,9 @@ window.addEventListener("DOMContentLoaded", () => {
   `;
 });
 window.setInterval(() => {
-  if (!document.hasFocus()) {
-    document.body.classList.add("___bja-no-focus");
-  } else {
+  if (document.hasFocus()) {
     document.body.classList.remove("___bja-no-focus");
+  } else {
+    document.body.classList.add("___bja-no-focus");
   }
 }, 50);
