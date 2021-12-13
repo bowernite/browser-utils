@@ -13,9 +13,10 @@ window.addEventListener("DOMContentLoaded", () => {
     position: fixed;
     z-index: 99999999999;
 
-    /* Purple -> teal -> white */
-    background: linear-gradient(to bottom, rgba(152, 0, 253, .6) 5%, rgba(96, 255, 246, .6) 50%, rgba(255, 0, 0, 0) 100%);
-    /* Yellow: rgba(249, 255, 100, 1) */
+    /* Purple -> teal -> yellow -> white */
+    background: linear-gradient(to bottom, rgba(96, 255, 246, .6) 25%, rgba(249, 255, 100, .6) 75%, rgba(255, 0, 0, 0) 100%);
+    /* Yellow: rgba(249, 255, 100, .6) */
+    /* Purple: rgba(152, 0, 253, .6) */
 
     top: 0;
   }
