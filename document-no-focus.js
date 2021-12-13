@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
   style.innerHTML = `
   .${className}::before {
     content: "";
-    height: 20px;
+    height: 7px;
     width: 100vw;
     position: fixed;
     z-index: 99999999999;
