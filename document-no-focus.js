@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 window.setInterval(() => {
   if (document.hasFocus()) {
-    document.body.classList.remove(className);
+    document.body?.classList.remove(className);
   } else {
     document.body?.classList.add(className);
   }
