@@ -14,10 +14,11 @@ window.addEventListener("DOMContentLoaded", () => {
     z-index: 99999999999;
 
     /* Purple -> teal -> yellow -> white */
-    background: linear-gradient(to bottom, rgba(242,62,251,0.85) 0%, rgba(242,62,251,0.85) 50%, rgba(255, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgb(128, 128, 128) 0%, rgb(128, 128, 128) 50%, rgba(255, 0, 0, 0) 100%);
     /* Yellow: rgba(249, 255, 100, .6) */
     /* Purple: rgba(152, 0, 253, .6) */
     /* Teal: rgba(96, 255, 246, .6) */
+    /* Pink: rgba(242, 62, 251, 0.85) */
 
     top: 0;
   }
@@ -28,7 +29,9 @@ window.addEventListener("DOMContentLoaded", () => {
     top: 0;
     left: 0;
     /* box-shadow: inset 0px 0px 36px -6px #000; */
-    box-shadow: inset 0px 0px 18px 5px rgb(242 62 251);
+    /* Pink */
+    /* box-shadow: inset 0px 0px 18px 5px rgb(242 62 251); */
+    box-shadow: inset 0px 0px 18px 5px rgb(128, 128, 128);
     z-index: 99999999999;
     width: 100vw;
     height: 100vh;
