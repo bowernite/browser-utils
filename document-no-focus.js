@@ -22,9 +22,16 @@ window.addEventListener("DOMContentLoaded", () => {
     top: 0;
   }
   
-  .${className} {
+  .${className}::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     /* box-shadow: inset 0px 0px 36px -6px #000; */
     box-shadow: inset 0px 0px 18px 5px rgb(242 62 251);
+    z-index: 99999999999;
+    width: 100vw;
+    height: 100vh;
   }
 
   /* .${className} {
